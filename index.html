@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="images (1).png" type="image/x-icon">
+  <title>YouTube</title>
+</head>
+
+<body>
+
+<header>
+  <div class="col-1">
+    <i class="ri-menu-fill"></i>
+   <img src="Promo-edited-image.jpeg" alt="" >
+  </div>
+  <div class="col-2">
+    <div class="input">
+      <input type="text" name="" id="searchbar" placeholder="search">
+    </div>
+    <button class="search"><i class="ri-search-line"></i></button>
+    <button class="microphone"><i class="ri-mic-line"></i></button>
+  </div>
+  <div class="col-3">
+    <i class="ri-video-add-line"></i>
+    <i class="ri-notification-3-line"></i>
+    <i class="ri-user-6-line"></i>
+  </div>
+</header>
+<div class="fake_header"></div>
+
+<!-- wrapper -->
+ <div class="wrapper">
+  <div class="side_bar">
+   <div class="list_items"> 
+    
+    <a class="sidebar"><i class="ri-home-line"></i>Home</a>
+    <a class="sidebar"><i class="ri-movie-2-line"></i>Shorts</a>
+    <a class="sidebar"><i class="ri-mail-volume-line"></i>Subscription</a>
+
+    <hr>
+    <h3>You<i class="ri-arrow-right-s-line sami"></i></h3>
+    <a class="sidebar"><i class="ri-shield-user-line"></i>Your Channel</a>
+    <a class="sidebar"><i class="ri-history-line"></i>History</a>
+    <a class="sidebar"><i class="ri-play-list-fill"></i>Playlist</a>
+    <a class="sidebar"><i class="ri-video-line"></i>Your Video</a>
+    <a class="sidebar"><i class="ri-eye-line"></i>Watch Later</a>
+    <a class="sidebar"><i class="ri-thumb-up-line"></i>Liked Video</a>
+
+    <hr>
+    <h3>Explore<i class="ri-ie-fill sami"></i></h3>
+    <a class="sidebar"><i class="ri-fire-line"></i>Trending</a>
+    <a class="sidebar"><i class="ri-music-line"></i>Music</a>
+    <a class="sidebar"><i class="ri-gamepad-line"></i>Gaming</a>
+    <a class="sidebar"><i class="ri-news-line"></i>Newz</a>
+    <a class="sidebar"><i class="ri-trophy-line"></i>Sport</a>
+    
+    <hr>
+    <h3>More From Youtube<i class="ri-youtube-line sami"></i></h3>
+    <a class="sidebar"><i class="ri-tools-fill"></i>Setting</a>
+    <a class="sidebar"><i class="ri-hourglass-2-fill"></i>Report History</a>
+    <a class="sidebar"><i class="ri-question-line"></i>Help</a>
+    <a class="sidebar"><i class="ri-feedback-line"></i>Send Feedback</a>
+    
+  </div> 
+</div>
+  <div class="tags">
+    <div class="tag_item">
+      <a href="">All</a>
+      <a href="">Data Science</a>
+      <a href="">Flutter</a>
+      <a href="">Java</a>
+      <a href="">DSA</a>
+      <a href="">Mobile Development</a>
+      <a href="">Web Development</a>
+    </div>
+   <div class="content">
+  
+  </div>
+ 
+ </div>
+ </div>
+</body>
+
+
+<script src="index.js"></script>
+<!-- let serchbar=document.querySelector('#searchbar')
+
+let serchbtn=document.querySelector('.search')
+let video_card=document.querySelector('.content')
+fetch(video_http + new URLSearchParams({
+  key:api_key,
+  part:'snippet',
+  maxResults:12,
+  chart:'mostpopular',
+  regionCode:'US'
+}))
+.then((res)=> res.json())
+.then((data)=>{
+  // console.log(data);
+  data.items.forEach(item => {
+   getchannelicon(item)
+  });
+})
+.catch((err)=>console.log(err))
+const getchannelicon=(video_data)=>{
+fetch(channel_HTTP + new URLSearchParams({
+  key:api_key,
+  part:'snippet',
+  id:video_data.snippet.channelId
+}))
+.then((res)=>res.json())
+.then((data)=>{
+  console.log(video_data);
+  video_data.channelthumbnail=data.items[0].snippet.thumbnails.default.url
+  makevideocard(video_data)
+})
+
+}
+const makevideocard=(video_data)=>{
+  video_card.innerHTML+=`
+   <div class="videos">
+      <div class="video_content" onclick="bb('${video_data.id}')">
+      <div class="image">
+        <img src="${video_data.snippet.thumbnails.high.url}" alt="">
+      </div>
+      <div class="video-detail">
+        <img src="${video_data.channelthumbnail}" alt="">
+        <h2>${video_data.snippet.title}</h2>
+      </div>
+      <div class="channel_detail">
+        <p>${video_data.snippet.channelTitle}</p>
+      </div>
+    </div>
+  `
+ 
+}
+function bb(video_data) {
+  location.href=`https://www.youtube.com/watch?v=${video_data}`
+}
+serchbtn.addEventListener('click',()=>{
+let searchlink=`https://www.youtube.com/results?search_query=${serchbar.value}`
+location.href=searchlink;
+
+}) -->
+</html>
